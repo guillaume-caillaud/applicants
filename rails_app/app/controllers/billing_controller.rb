@@ -33,6 +33,10 @@ class BillingController < ApplicationController
 			
 			price = consumption * ppkwh * discount * contract["contract_length"].to_f
 			
+			if contract["green"]
+				price -= 0.05 * consumption
+			end
+			
 			insurance_fee = 0.05 * contract["contract_length"] * 365
 			provider_fee = price - insurance_fee
 			selectra_fee = provider_fee * 0.125
@@ -44,7 +48,7 @@ class BillingController < ApplicationController
 					"selectra_fee": selectra_fee.round(2)
 				},
 				"id": id,
-				"price": price,
+				"price": price.round(2),
 				"user_id": contract["user_id"]
 			})
 			id+=1
