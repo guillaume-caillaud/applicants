@@ -30,8 +30,19 @@ class BillingController < ApplicationController
 				discount = 0.75
 			end
 			
+			
 			price = consumption * ppkwh * discount * contract["contract_length"].to_f
+			
+			insurance_fee = 0.05 * contract["contract_length"] * 365
+			provider_fee = price - insurance_fee
+			selectra_fee = provider_fee * 0.125
+			
 			bills.push({
+				"commission": {
+					"insurance_fee": insurance_fee.round(2),
+					"provider_fee": provider_fee.round(2),
+					"selectra_fee": selectra_fee.round(2)
+				},
 				"id": id,
 				"price": price,
 				"user_id": contract["user_id"]
