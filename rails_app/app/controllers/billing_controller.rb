@@ -28,8 +28,11 @@ class BillingController < ApplicationController
 				contracts.push(contract.clone)
 				contract_id[contract["id"].to_s]=id
 				contract = contracts[id]
+				contract["cancellation"] = false
 				contract["start_date"] = contract_modification["start_date"]
 				id+=1
+			else
+				contract["cancellation"] = true
 			end
 			
 			if contract_modification["end_date"] != nil
@@ -69,6 +72,9 @@ class BillingController < ApplicationController
 			
 			insurance_fee = 0.05 * contract_length * 365
 			provider_fee = price - insurance_fee
+			if contract["cancellation"]
+				provider_fee += 50
+			end
 			selectra_fee = provider_fee * 0.125
 			
 			bills.push({
