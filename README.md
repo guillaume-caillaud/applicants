@@ -1,21 +1,16 @@
 # Selectra Technical Challenge
 
-Welcome to Selectra's technical tests suite. In this game, you will be building a simple billing service.
+This is my input for the Technical Challenge
 
-## Instructions
+The code is located in /rails_app and is written in Ruby on Rails 5.1
 
-- Clone this repository
-- Solve as many levels as you can, and in ascending order
-- Commit your code at the end of each level
-- Give `part2` a try, even if you have not fully finished `part1`
-- Email rh+tech@selectra.info when you are done, with a link to your GitHub repository!
+In part 1 I was abble to go all the way to level 5 without any problem. As for the 6th level I do not get the same values.
 
-Levels become more complex over time, so you will probably have to re-use some code and adapt it to the new requirements.
+As for the moment I haven't started part 2.
 
-## Requirements
+## To start the app
 
-- Pick either **PHP** or **Ruby**
-- Clean, readable and robust code
-- Follow Software Development best practices
-
-Please do try to do the simplest thing that could work first.
+-Go to rails_app
+-In a terminal enter `bundle install`
+-Start the server with `rails s`
+-To communicate with the API go to `http://localhost:3000/`
