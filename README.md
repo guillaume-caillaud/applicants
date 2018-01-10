@@ -10,7 +10,13 @@ As for the moment I haven't started part 2.
 
 ## To start the app
 
--Go to rails_app
--In a terminal enter `bundle install`
--Start the server with `rails s`
--To communicate with the API go to `http://localhost:3000/`
+- Go to rails_app
+- In a terminal enter `bundle install`
+- Start the server with `rails s`
+- To communicate with the API go to `http://localhost:3000/`
+
+## To use the CLI tool
+
+- Download Python
+- Install `requests` with `pip install requests`
+- Run cli_tool/Main.py
