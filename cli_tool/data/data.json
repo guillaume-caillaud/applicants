@@ -1,0 +1,95 @@
+{
+  "contract_modifications": [
+    {
+      "contract_id": 1,
+      "end_date": "2018-12-25",
+      "id": 1
+    },
+    {
+      "contract_id": 1,
+      "end_date": "2019-12-25",
+      "id": 2,
+      "provider_id": 3,
+      "start_date": "2018-12-25"
+    },
+    {
+      "id": 3,
+      "contract_id": 1,
+      "end_date": "2019-01-01"
+    }
+  ],
+  "contracts": [
+    {
+      "end_date": "2019-12-26",
+      "green": true,
+      "id": 1,
+      "provider_id": 2,
+      "start_date": "2017-12-26",
+      "user_id": 2
+    },
+    {
+      "end_date": "2018-12-25",
+      "green": true,
+      "id": 2,
+      "provider_id": 1,
+      "start_date": "2017-12-25",
+      "user_id": 2
+    },
+    {
+      "end_date": "2018-12-25",
+      "green": false,
+      "id": 3,
+      "provider_id": 2,
+      "start_date": "2017-12-25",
+      "user_id": 3
+    },
+    {
+      "id": 4,
+      "start_date": "2018-01-07",
+      "end_date": "2020-07-07",
+      "green": true,
+      "provider_id": 4,
+      "user_id": 4
+    }
+  ],
+  "providers": [
+    {
+      "cancellation_fee": true,
+      "id": 1,
+      "price_per_kwh": 0.15
+    },
+    {
+      "cancellation_fee": true,
+      "id": 2,
+      "price_per_kwh": 0.145
+    },
+    {
+      "cancellation_fee": false,
+      "id": 3,
+      "price_per_kwh": 0.145
+    },
+    {
+      "id": 4,
+      "price_per_kwh": 0.16,
+      "cancellation_fee": true
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "yearly_consumption": 4100
+    },
+    {
+      "id": 2,
+      "yearly_consumption": 2000
+    },
+    {
+      "id": 3,
+      "yearly_consumption": 5000
+    },
+    {
+      "yearly_consumption": 6423,
+      "id": 4
+    }
+  ]
+}
